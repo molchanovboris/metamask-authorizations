@@ -1,0 +1,9 @@
+<ng-container *ngIf="isNotLocked(); else notConnectedBlock">
+    <p>Connected</p>
+    <p>Account: {{getAccountAddress()}}</p>
+    <p>NetworkId: {{getNetworkId()}}</p>
+</ng-container>
+
+<ng-template #notConnectedBlock>
+    <button (click)="connect()">Connect</button>
+</ng-template>
